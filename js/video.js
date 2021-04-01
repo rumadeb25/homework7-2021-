@@ -54,18 +54,18 @@ document.querySelector("#skip").addEventListener("click", function() {
 });
 
 document.querySelector("#slider").addEventListener("change", function() {
-	video.volume = document.querySelector('#slider').value / 100;
-	document.querySelector('volume').innerHTML = (video.volume * 100) + "%"
+	video.volume = this.value/100;
+	volume.innerHTML = (this.value) + "%"
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
 	if (video.muted == false) {
-		video.muted == true;
-		document.querySelector('#mute').innerHTML = "Unmute;"
+		video.muted = true;
+		document.querySelector('#mute').innerHTML = "Unmute";
 	}
 	else{
 		video.muted = false;
-		document.querySelector('#mute').innerHTML = "Mute;"
+		document.querySelector('#mute').innerHTML = "Mute";
 	}
 });
 
